@@ -54,9 +54,9 @@ Evaluation metric
 
 The metric used in this challenge to rank the participants is the Kullback-Leibler divergence for discrete distributions, defined by:
 
-\[
+```math
 KL(y, \hat{y}) = \sum_{i=1}^C (y_i + \espilon) log(\frac{y_i + \epsilon}{\hat{y_i} + \epsilon})
-\]
+```
 
 where yyy is the ground-truth class distribution vector, $y^\hat{y}y^​$ is the predicted class distribution vector and CCC is the number of classes, excluding the classes “no_data” and “clouds”. This measures how the predicted distribution is different from the ground-truth distribution, and therefore should be minimized. A small term ϵ\epsilonϵ (fixed to 10−810^{-8}10−8 ) is added to yiy_iyi​ and yi^\hat{y_i}yi​^​ for smoothness around zero.
 
